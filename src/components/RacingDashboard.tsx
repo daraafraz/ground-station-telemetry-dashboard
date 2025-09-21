@@ -359,7 +359,7 @@ function PlayerCar() {
 
 function MovingCarOnTrack({ position = 0, isPlayer = false }: { position?: number; isPlayer?: boolean }) {
   return (
-    <div className="absolute box-border content-stretch flex items-center justify-center px-[110px] py-[4px] translate-x-[-50%] translate-y-[-50%] w-[400px]" style={{ top: `calc(50% - ${7.045 + position * 5}px)`, left: "50%" }}>
+    <div className="absolute box-border content-stretch flex items-center justify-center px-[110px] py-[4px] translate-x-[-50%] translate-y-[-50%] w-[400px]" style={{ top: `calc(50% - ${7.045 + position * 5}px)`, left: "calc(50% - 20px)" }}>
       {position === 0 && <RoadPath />}
       <div className="absolute flex h-[30.707px] items-center justify-center left-[98.34px] top-[200.65px] w-[11.307px]">
         <div className="flex-none rotate-[6.455deg]">
