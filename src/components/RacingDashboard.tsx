@@ -470,18 +470,24 @@ function DataVisualization({ title }: { title: string }) {
   );
 }
 
-function MidThird() {
+// Top row: Maps (40% height)
+function TopRow() {
   return (
-    <div className="basis-0 content-stretch flex gap-[10px] grow items-start min-h-px min-w-px overflow-clip relative rounded-[15px] shrink-0 w-full" data-name="Mid-Third">
-      <Map />
-      <FullTrackMap />
+    <div className="basis-[40%] content-stretch flex gap-[10px] items-start min-h-px min-w-px overflow-clip relative shrink-0 w-full" data-name="Top Row">
+      <div className="basis-[60%] grow min-h-px min-w-px relative shrink-0">
+        <Map />
+      </div>
+      <div className="basis-[40%] grow min-h-px min-w-px relative shrink-0">
+        <FullTrackMap />
+      </div>
     </div>
   );
 }
 
-function BottomHalf() {
+// Middle row: Data charts (35% height)
+function MiddleRow() {
   return (
-    <div className="basis-0 content-stretch flex gap-[10px] grow items-start min-h-px min-w-px overflow-clip relative shrink-0 w-full" data-name="Bottom-Half">
+    <div className="basis-[35%] content-stretch flex gap-[10px] items-start min-h-px min-w-px overflow-clip relative shrink-0 w-full" data-name="Middle Row">
       <div className="basis-0 content-stretch flex flex-col gap-[10px] grow h-full items-start min-h-px min-w-px overflow-clip relative shrink-0">
         <DataVisualization title="Control Heading Errors" />
       </div>
@@ -495,11 +501,26 @@ function BottomHalf() {
   );
 }
 
+// Bottom row: Planner and Safety (25% height)
+function BottomRow() {
+  return (
+    <div className="basis-[25%] content-stretch flex gap-[10px] items-start min-h-px min-w-px overflow-clip relative shrink-0 w-full" data-name="Bottom Row">
+      <div className="basis-[50%] grow min-h-px min-w-px relative shrink-0">
+        <PlannerSection />
+      </div>
+      <div className="basis-[50%] grow min-h-px min-w-px relative shrink-0">
+        <SafetyMonitor />
+      </div>
+    </div>
+  );
+}
+
 function Main() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[10px] grow h-full items-start min-h-px min-w-px overflow-clip relative shrink-0" data-name="Main">
-      <MidThird />
-      <BottomHalf />
+      <TopRow />
+      <MiddleRow />
+      <BottomRow />
     </div>
   );
 }
@@ -715,8 +736,6 @@ function ControlButtons() {
 function SideUseThisForResize() {
   return (
     <div className="content-stretch flex flex-col gap-[10px] h-full items-start relative shrink-0 w-[782px]" data-name="Side (Use this for resize)">
-      <PlannerSection />
-      <SafetyMonitor />
       <ControlButtons />
     </div>
   );
