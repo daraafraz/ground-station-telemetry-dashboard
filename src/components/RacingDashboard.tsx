@@ -750,7 +750,7 @@ function BurgerIcon() {
 
 export default function RacingDashboard() {
   return (
-    <div className="bg-[#18181a] relative size-full" data-name="Racing Dashboard">
+    <div className="bg-[#18181a] relative size-full" data-name="Ground Station Telemetry Dashboard">
       <div className="flex flex-row items-center justify-center relative size-full">
         <div className="box-border content-stretch flex gap-[10px] items-center justify-center pb-[10px] pt-[25px] px-[10px] relative size-full">
           <Article />
