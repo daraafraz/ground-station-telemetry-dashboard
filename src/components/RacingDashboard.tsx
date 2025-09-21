@@ -754,7 +754,6 @@ export default function RacingDashboard() {
       <div className="flex flex-row items-center justify-center relative size-full">
         <div className="box-border content-stretch flex gap-[10px] items-center justify-center pb-[10px] pt-[25px] px-[10px] relative size-full">
           <Article />
-          <div className="absolute bg-center bg-cover bg-no-repeat h-[24px] right-[20px] top-[17px] w-[445px]" data-name="Logos" style={{ backgroundImage: `url('/d57eb00bb2dd33552a7e265032ac4831b54a0332.png')` }} />
           <BurgerIcon />
         </div>
       </div>
